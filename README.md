@@ -11,6 +11,8 @@ The projects puts artists at the forefront to create their user profile and crea
 ## User Description
 The typical users of this solution would be musical artists looking to control the music that is visible to other artists
 
+## UML Diagram
+
 ## Domain Objects Description
 All objects have relevant foreign keys to establish relationships with other objects
 
@@ -27,5 +29,7 @@ The user, artists, are on the 'one' side of a one to many relationship with the 
 Album and Songs are in a one-to-many relationship, respectively. One album can contain many songs and if you delete an album, its songs are also deleted
 
 ## Portable Enumerations
+The solution contains one enumeration in the Album object. Genre is an enumeration with possible values: 'rnb', 'pop', 'rap', 'hipHop', 'country', 'kPop'. This is implemented sing MySQL's enum.
 
 ## User Interface Requirements
+Each of the three objects contain a list screen and an editor screen. The list screens display all the records in the object's table. It also contains an 'Add' button at the top that creates a new record with default values that can later be edited. Each record is clickable. The link of the record takes you to the record's editor pade where you can update the record, delete the record, or exit the editor screen using the cancel button. The album screen contains a button to songs which displays all the song's in the current album. The artist screen contains a button to all the albums belonging to that artist. Each link in the album's songs screen and album's artist screen will navigate you to that record's page.
