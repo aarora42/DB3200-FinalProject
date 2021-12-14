@@ -26,18 +26,20 @@ const OneToManyListScreen = () => {
           <div className="list-group">
             {
               records.map(record =>
-                <Link to={`/${manyTable}/${record.idSongs}`}
+                <a href={`http://localhost:63342/spring-template/src/main/webapp/songs/#/edit/${record.idSongs}`}
                       className="list-group-item"
                       key={record.idSongs}>
-                  {
-                    schema.fields.map(field =>
-                      field.references ? null :
-                        <span key={field.name}>
-                            {record[field.name]},
-                          </span>
-                    )
-                  }
-                </Link>
+                  {/*  {*/}
+                  {/*  schema.fields.map(field =>*/}
+                  {/*    field.references ? null :*/}
+                  {/*      <span key={field.name}>*/}
+                  {/*          {record[field.name]},*/}
+                  {/*        </span>*/}
+                  {/*  )*/}
+                  {/*}*/}
+
+                    {record.idSongs}, {record.title}
+                </a>
               )
             }
 

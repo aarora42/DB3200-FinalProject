@@ -27,7 +27,7 @@ const OneToManyListScreen = () => {
             {
 
               records.map(record =>
-                  <Link to={`/${manyTable}/${record.id}`}
+                  <a href={`http://localhost:63342/spring-template/src/main/webapp/albums/#/edit/${record.id}`}
                         className="list-group-item"
                         key={record.id}>
                       {/*{*/}
@@ -39,7 +39,7 @@ const OneToManyListScreen = () => {
                       {/*    )*/}
                       {/*}*/}
                       {record.id}, {record.title}
-                  </Link>
+                  </a>
               )
             }
 

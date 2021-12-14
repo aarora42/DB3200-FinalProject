@@ -4,7 +4,7 @@ export const schema = {
     label: 'Artist'
   },
   fields: [
-    {name: 'idArtst', label: 'Artist ID', readonly: true},
+    {name: 'idArtist', label: 'Artist ID', readonly: true},
     {name: 'firstName', label: 'First Name'},
     {name: 'lastName', label: 'Last Name'},
     {name: 'username', label: 'Username'},
