@@ -13,6 +13,11 @@ The typical users of this solution would be musical artists looking to control t
 
 ## UML Diagram
 [diagram link](DBD-Final-p3.pdf)
+
+## User Object Description
+### Artists Object
+The user object in this project is the Aritst class consisting of an artist's name, date of birth, username, password, and email. Foreign keys connect the artist to the album domain object.
+
 ## Domain Objects Description
 All objects have relevant foreign keys to establish relationships with other objects
 
@@ -23,10 +28,10 @@ Users can create albums with a title and the album is one the 'one' side of a on
 
 ## Relationships
 ### User-to-Domain
-The user, artists, are on the 'one' side of a one to many relationship with the album domain object. This is because a single artist can write many albums. There is also a dependency on the artist. If you delete and artist, the database cascade deletes the album records.
+The user, artists, is on the 'one' side of a one to many relationship with the album domain object. This is because a single artist can write many albums. There is also a dependency on the artist. If you delete and artist, the database cascade deletes the album records. This is specifically a one-to-many composition relationship between artist and album, respectively.
 
 ### Domain-to-Domain
-Album and Songs are in a one-to-many relationship, respectively. One album can contain many songs and if you delete an album, its songs are also deleted
+Album and Songs are in a one-to-many relationship, respectively. One album can contain many songs and if you delete an album, its songs are also deleted This is specifically a one-to-many composition relationship between album and songs, respectively.
 
 ## Portable Enumerations
 The solution contains one enumeration in the Album object. Genre is an enumeration with possible values: 'rnb', 'pop', 'rap', 'hipHop', 'country', 'kPop'. This is implemented sing MySQL's enum.
