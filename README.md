@@ -10,7 +10,9 @@ The projects puts artists at the forefront to create their user profile and crea
 The typical users of this solution would be musical artists looking to control the music that is visible to other artists
 
 ## Domain Objects Description
+All objects have relevant foreign keys to establish relationships with other objects
+
 ### Song Object
-Users can add a song with a title and custom genre (enumeration)
+Users can add a song with a title and custom genre (enumeration). The Song object is on the many side of a one to many relationship with albums as there can be many songs in a single album
 ### Album Object
 Users can create albums with a title and the album is one the 'one' side of a one-to-many relationship with songs. This means that one album can contain many songs. It is also on the 'many' side of a one-to-many relationship with artists as a single artist can write many songs. The editor screen of this object allows the user to view a list of the songs related to that album
