@@ -1,23 +1,26 @@
-// TODO: declare URL where server listens for HTTP requests
 const URL = "http://localhost:8080/api";
 
 export const findAllRecords = (table) =>
-  fetch(`${URL}/songs`)
+  fetch(`${URL}/albums`)
     .then(response => response.json());
 
 export const findRecordById = (table, id) =>
-  fetch(`${URL}/songs/${id}`)
+  fetch(`${URL}/albums/${id}`)
+    .then(response => response.json());
+
+export const findOneToManyRecords = (oneTable, id, manyTable) =>
+  fetch(`${URL}/${oneTable}/${id}/${manyTable}`)
     .then(response => response.json());
 
 export const removeRecord = (table, id) =>
-  fetch(`${URL}/songs/${id}/remove`);
+  fetch(`${URL}/albums/${id}/remove`);
 
 export const createRecord = (table) =>
-  fetch(`${URL}/songs/create`);
+  fetch(`${URL}/albums/create`);
 
-// TODO: update a user by their ID
+
 export const updateRecord = (table, newRecord) =>
-  fetch(`${URL}/songs`, {
+  fetch(`${URL}/albums`, {
     method: 'PUT',
     body: JSON.stringify(newRecord),
     headers: {
@@ -27,5 +30,10 @@ export const updateRecord = (table, newRecord) =>
 
 // TODO: export all functions as the API to this service
 export default {
-  findAllRecords, findRecordById, removeRecord, createRecord, updateRecord
+  findAllRecords,
+  findRecordById,
+  findOneToManyRecords,
+  removeRecord,
+  createRecord,
+  updateRecord
 }

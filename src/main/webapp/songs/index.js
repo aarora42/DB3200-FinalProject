@@ -1,15 +1,15 @@
-import RecordListScreen from "./record-list-screen";
-import RecordEditorScreen from "./record-editor-screen";
+import SongListScreen from "./song-list-screen";
+import SongsEditorScreen from "./songs-editor-screen";
 const {HashRouter, Route} = window.ReactRouterDOM; 
 const App = () => {
     return (
         <div className="container-fluid">
             <HashRouter>
                 <Route path={["/list", "/"]} exact={true}>
-                    <RecordListScreen/>
+                    <SongListScreen/>
                 </Route>
                 <Route path="/edit/:id" exact={true}>
-                    <RecordEditorScreen/>
+                    <SongsEditorScreen/>
                 </Route>
             </HashRouter>
         </div>

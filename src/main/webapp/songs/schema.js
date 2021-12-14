@@ -4,7 +4,8 @@ export const schema = {
     label: 'Song'
   },
   fields: [
-    {name: 'id', label: 'Song ID', readonly: true},
+    {name: 'idSongs', label: 'Song ID', readonly: true},
     {name: 'title', label: 'Song Title'},
+    {name: 'genre', label: 'Genre'},
   ]
 };
