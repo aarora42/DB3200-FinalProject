@@ -6,6 +6,7 @@ export const schema = {
   fields: [
     {name: 'id', label: 'Album Id', readonly: true},
     {name: 'title', label: 'Title'},
+    {name: 'artistId', label: 'Artist Id'},
     {name: 'songs', label: 'Songs', references: 'songs'}
   ],
   references: [
