@@ -12,7 +12,7 @@ The projects puts artists at the forefront to create their user profile and crea
 The typical users of this solution would be musical artists looking to control the music that is visible to other artists
 
 ## UML Diagram
-[diagram link](DBD-Final-p3.pdf)
+[diagram link](db_design_final_project_UML.pdf)
 
 ## User Object Description
 ### Artists Object
