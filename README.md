@@ -1,7 +1,7 @@
 # Artist Hub
 ## Team
 Anusha Arora
-Final Project 2021
+Group: Final Project 21
 ## Problem Statement
 While many hubs exist for music listeners (Spotify, Apple Music, etc.), there are not many existing hubs for artists
 
